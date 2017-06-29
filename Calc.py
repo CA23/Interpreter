@@ -67,14 +67,15 @@ class Interpret:
         self.process('INTEGER')
         #recall that process checks for a type and if it matches, sets
         #current token to next token
-        #so, now current is the next token
+        #so, now current token is the next token/char in the text input
         operation = self.current
-        #now we a digit as a left token, operator as a right
+        #now we have a digit as a left token, operator as a right
         self.process('PLUS')
         #checks if the current is an operator, sets the next token as current
         right = self.current
         self.process('INTEGER')
-        #now after this process the current is set to None
+        #now after this process the current is set to None, left is a digit, operation is the middle token and right
+        #is another digit.
 
         result  = left.value + right.value
         #evaluate and assign to result
