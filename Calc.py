@@ -32,7 +32,7 @@ class Interpret:
         if self.position > len(text) - 1:
             return Tokenizer(None, None)
 
-        #using position as index to the text to get one character at a time 
+        #setting the final token to None at the end of text
 
         ch_current = text[self.position]
 
